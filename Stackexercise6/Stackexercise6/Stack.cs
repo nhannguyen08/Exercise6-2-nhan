@@ -8,29 +8,32 @@ namespace Stackexercise6
 {
    public class Stack
     {
-        private int[] Buffer;
+        private string[] Buffer;
         private int Top;
         private int v;
+       //có thể dùng string ...
         public Stack(int size)
         {
-            Buffer = new int[size];
-            Top -= 1;
+            Buffer = new string[size];
+             Top =- 1;
         }
-        public void Push(int v)
+       
+        public void Push(string v)
         {
            Buffer[Top+1] = v;
             Top++;
-            
+            //Buffer[Top++] = v; //sai
+            //Buffer[++Top] = v; //dung
         }
-        public int pop()
+        public string pop()
         {
-            v = Buffer[Top];
+           string v = Buffer[Top];
             Top--;
             return v;
         }
-        public int peek()
+        public string peek()
         {
-            v = Buffer[Top];
+           string v = Buffer[Top];
             return v;
         }
         public void Clear()
